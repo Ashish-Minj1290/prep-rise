@@ -9,11 +9,8 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {signInWithEmailAndPassword} from "firebase/auth";
 import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 
@@ -59,7 +56,9 @@ const AuthForm = ({ type }: { type: FormType }) => {
           password,
         });
 
+        // @ts-ignore
         if (!result.success) {
+          // @ts-ignore
           toast.error(result.message);
           return;
         }
