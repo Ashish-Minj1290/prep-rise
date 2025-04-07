@@ -8,7 +8,7 @@ import DisplayTechIcons from "./DisplayTechIcons";
 import { cn, getRandomInterviewCover } from "@/lib/utils";
 import { getFeedbackByInterviewId } from "@/lib/actions/general.action";
 
-// @ts-ignore
+
 const InterviewCard = async ({
                                  interviewId,
                                  userId,
